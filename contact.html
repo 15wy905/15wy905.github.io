@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>联系留言</title>
+    <script type="text/javascript">
+    function checkreg() {
+        var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+        if (document.form1.name.value == "") {
+            document.getElementById("tish").innerHTML = "<font color='red'>请输入您的用户名!</font>";
+            form1.name.focus();
+            return false;
+        }
+        document.getElementById("tish").innerHTML = "<font color='green'>正确</font>";
+
+        if (document.form1.password.value == "") {;
+            document.getElementById("ts").innerHTML = "<font color='red'>请输入密码</font>";
+            form1.password.focus();
+            return false;
+        }
+        if (document.form1.password.value.length < 6 || document.form1.password.value.length > 20) {
+            document.getElementById("ts").innerHTML = "<font color='red'>密码长度限制在6-20位!</font>";
+            form1.password.focus();
+            return false;
+        }
+        document.getElementById("ts").innerHTML = "<font color='green'>正确</font>";
+        if (document.form1.password.value != document.form1.pasagain.value) {
+            document.getElementById("queren").innerHTML = "<font color='red'>两次密码不相同</font>";
+            form1.password.focus();
+            return false;
+        }
+        document.getElementById("queren").innerHTML = "<font color='green'>正确</font>";
+
+        if (!myreg.test(document.form1.phone.value)) {
+            document.getElementById("tss").innerHTML = "<font color='red'>手机号码错误</font>";
+            form1.password.focus();
+            return false;
+        }
+
+        document.getElementById("tsi").innerHTML = "<font color='green'>正确</font>";
+        return true; // 返回true允许表单提交
+    }
+    </script>
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class=" shouye">
+        <div class=" shouye_denglu"><a href="zhuce.html">注册</a> </div>
+        <img src="images/head.jpg" width="1000" height="365" /></div>
+    <div class="topcaidan"><a href="index.html">Index</a>| <a href="about.html">个人简介</a>|<a href="idary.html">个人作品</a>|<a href="pic.html">动漫大赏</a>|<a href="contact.html">联系留言</a></div>
+    <div class="nr">
+        <div class=" zy_nr_bt">联系留言
+            <span>&nbsp;Contact</span></div>
+        <hr />
+        <div class="nr_cont">
+            <div align="center">
+                <p> </p>
+            </div>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <form name="form1" onSubmit="return checkreg()" action="successliuyan.html" method="post">
+                <div class="conact">
+                    <div class="conactl">用户名：</div>
+                    <div class="conactr">
+                        <label>
+                            <input name="name" type="text" size="40" id="name" />
+                        </label>
+                        <span id="tish"></span>
+                    </div>
+                    <div class="cl"></div>
+                    <div class="conactl">密码：</div>
+                    <div class="conactr">
+                        <label>
+                            <input name="textfield" type="password" id="password" size="40" />
+                        </label> <span id="ts"></span>
+                    </div>
+                    <div class="cl"></div>
+                    <div class="conactl">确认密码：</div>
+                    <div class="conactr">
+                        <label>
+                            <input name="textfield" type="password" id="pasagain" size="40" />
+                        </label> <span id="queren"></span>
+                    </div>
+                    <div class="cl"></div>
+                    <div class="conactl">性别：</div>
+                    <div class="conactr ">
+                        <label>
+                            <input type="radio" name="gender" id="radio" value="male" /> &nbsp; 男&nbsp; 
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" id="radio2" value="female" /> &nbsp; 女 
+                        </label>
+                    </div>
+                    <div class="cl"></div>
+                    <div class="conactl">出生日期：</div>
+                    <div class="conactr">
+                        <label>
+                            <select name="select" id="select">
+                                <option value="1995">1995</option>
+                                <option value="1996">1996</option>
+                                <option value="1997">1997</option>
+                                <option value="1998">1998</option>
+                                <option value="1999">1999</option>
+                                <option value="2000">2000</option>
+                            </select>
+                        </label>
+                        年
+                        <label>
+                            <select name="select2" id="select2">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </label>
+                        月
+                        <label>
+                            <select name="select3" id="select3">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </label>
+                        日
+                    </div>
+                    <div class="cl"></div>
+                    <div class="conactl">Eamil：</div>
+                    <div class="conactr">
+                        <label>
+                            <input name="textfield" type="text" id="textfield" size="40" />
+                        </label>
+                    </div>
+                    <div class="cl"></div>
+                    <div class="conactl">手机号码：</div>
+                    <div class="conactr">
+                        <label>
+                            <input name="textfield" type="tel" size="40" id="phone" />
+                        </label> <span id="tss"></span>
+                    </div>
+                    <div class="cl"></div>
+                    <div class="conactl">头像：</div>
+                    <div class="conactr">
+                        <label>
+                            <select name="select4" id="select4" onChange="document.x1.src=options[selectedIndex].value">
+                                <option value="images/tx4.jpg">1</option>
+                                <option value="images/tx3.jpg">2</option>
+                                <option value="images/tx2.jpg">3</option>
+                                <option value="images/tx1.jpg">4</option>
+                            </select>
+                            <img src="images/t1.jpg" name="x1" width=50 vspace="5"> </label>
+                    </div>
+                    <div class="cl"></div>
+                    <div class="conactl">爱好：</div>
+                    <div class="conactr">
+                        <label>
+                            <input type="checkbox" name="checkbox" id="checkbox" /> 音乐
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checkbox2" id="checkbox2" /> 文学
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checkbox3" id="checkbox3" /> 游戏
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checkbox4" id="checkbox4" /> 旅游
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checkbox5" id="checkbox5" /> 运动
+                        </label>
+                    </div>
+                    <div class="cl"></div>
+                    <div class="conactl">个人签名：</div>
+                    <div class="conactr">
+                        <label>
+                            <textarea name="textarea" id="textarea" cols="45" rows="8"></textarea>
+                        </label>
+                    </div>
+                    <div class="cl"></div>
+                    <div class="conactl"></div>
+                    <div class="conactr">
+                        <input type="submit" value="提交" class="btn" />
+                        &nbsp;&nbsp;
+                        <label></label>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+            </form>
+            <div class="cl"></div>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="foot">版权所有&copy;宫崎骏展示网</div>
+</body>
+
+</html>

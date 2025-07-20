@@ -1,0 +1,435 @@
+@charset "utf-8";
+
+body {
+    font-family: "微软雅黑";
+    background: linear-gradient(135deg, #00ffff 0%, #aaaaff 50%, #aaffff 100%);
+}
+* {
+    margin: 0;
+    padding: 0
+}
+
+h1 h2 h3 h4 {
+    margin: 0 auto;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #990000
+}
+
+.mr10 {
+    margin-right: 10px
+}
+
+.mt20 {
+    margin-top: 20px
+}
+
+.l {
+    float: left
+}
+
+.r {
+    float: right
+}
+
+.cl {
+    clear: both
+}
+
+h3 {
+    letter-spacing: 3px;
+    font-size: 24px;
+    color: #FF0000
+}
+
+h4 {
+    margin: 10px
+}
+
+.denglu_main {
+    margin: 100px auto;
+    width: 600px;
+    background: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.img-box {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    background: #5d5151;
+    text-align: center;
+}
+
+.img-box img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.img-box a {
+    width: 76px;
+    height: 112px;
+    position: absolute;
+    top: 120px;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 76px;
+    text-align: center;
+    color: #fff;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+.img-box a:hover {
+    opacity: 1;
+}
+
+#img {
+    width: 100%;
+}
+
+#square {
+    width: 120px;
+    margin: 10px auto;
+    display: none;
+}
+
+#square li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #928c8c;
+    float: left;
+    margin-left: 10px;
+    position: relative;
+}
+
+#square .active {
+    background: #ffc107;
+}
+
+#square img {
+    width: 100px;
+    position: absolute;
+    border: 5px solid #fff;
+    bottom: 30px;
+    left: -45px;
+    display: none;
+}
+
+.denglu_tit {
+    width: 100px;
+    margin: 0 auto
+}
+
+.pad10 {
+    padding: 5px 10px
+}
+
+.denglu_bd {
+    margin: 10px 0;
+    text-align: center;
+    padding: 10px
+}
+
+.denglu_bd input {
+    width: 240px;
+    height: 30px;
+    border: 1px solid #d5d5d5
+}
+
+.xx {
+    border-bottom: 1px dotted #d5d5d5;
+    padding: 10px 0
+}
+
+.shouye {
+    margin: 0 auto;
+    width: 1000px;
+    background: #EFEFEF
+}
+
+.shouye_denglu {
+    text-align: right;
+    padding: 5px 20px 5px 0;
+    color: #666666
+}
+
+.topcaidan {
+    margin: 20px auto;
+    width: 1000px;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    background: #afd2d9
+}
+
+.topcaidan a {
+    margin: 0 25px;
+}
+
+.nr {
+    background: #fff;
+    line-height: 32px;
+    color: #666666;
+    width: 980px;
+    padding: 10px;
+    margin: 0 auto
+}
+
+.nr_bt {
+    padding: 15px;
+    background: #ffff;
+    margin: 10px auto;
+    width: 100px;
+    clear: both;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #333
+}
+
+.nr_cont {
+    padding: 10px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.shouye_fengcai {
+    margin: 20px auto
+}
+
+.shouye_fengcai ul li {
+    margin: 10px;
+    float: left
+}
+
+.xiangce {
+    padding: 10px;
+}
+
+.xiangce li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.xiangce li img {
+    width: 95%;
+    height: 300px;
+}
+
+.xiangce li p {
+    width: 95%;
+    padding: 10px 0
+}
+
+.shouye_fengcai ul li img {
+    float: left;
+    width: 300px;
+    height: 260px;
+}
+
+.indeximg {
+    float: left;
+    margin-right: 20px;
+}
+
+.indexnr {
+    float: right;
+    line-height: 30px;
+    width: 680px;
+}
+
+.indexnr_diary {
+    padding: 10px 0;
+    line-height: 32px;
+    color: #999999
+}
+
+.zy_nr_bt {
+    padding: 15px;
+    background: #fff;
+    margin: 10px auto;
+    clear: both;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #333
+}
+
+.zy_nr_bt span {
+    color: #FF0000
+}
+
+.conact {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.conactl {
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding: 10px 0;
+    line-height: 30px;
+}
+
+.conactr {
+    float: right;
+    width: 550px;
+    padding: 10px 0;
+    line-height: 30px
+}
+
+.conactr input {
+    height: 30px;
+}
+
+.conact .dxk {
+    vertical-align: middle
+}
+
+.conactr span {
+    margin-left: 20px
+}
+
+.about {
+    line-height: 28px;
+}
+
+input[type='radio'] {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+input[type='checkbox'] {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.btn {
+    padding: 5px 15px
+}
+
+.foot {
+    width: 1000px;
+    text-align: center;
+    padding: 30px 0;
+    margin: 0 auto;
+    background: #afd2d9
+}
+
+.topcaidan {
+    background-color: #5E8C61; 
+    color: white;
+}
+
+.topcaidan a {
+    color: white;
+}
+
+.nr {
+    background-color: #F0F7F4; 
+    border: 1px solid #A7C4BC;
+}
+
+.zy_nr_bt {
+    color: #5E8C61; 
+}
+
+.foot {
+    background-color: #5E8C61; 
+    color: white;
+}
+
+a:hover {
+    color: #F4D35E;}
+	
+.welcome-btn {
+	margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #f5f5dc;
+    color: #8b4513;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+        
+.welcome-btn:hover {
+	background-color: #8b4513;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+	
+.awards {
+	background-color: #f5f1e7;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    border-left: 5px solid #c4d29b;
+    }
+        
+.awards h3 {
+	color: #9b924e;
+    margin-top: 0;
+    border-bottom: 1px dashed #d2691e;
+    padding-bottom: 10px;
+	}
+        
+.awards ul {
+	padding-left: 20px;
+	}
+        
+.awards li {
+	margin-bottom: 10px;
+	list-style-type: none;
+	position: relative;
+	padding-left: 25px;
+	}
+        
+.awards li:before {
+	content: "★";
+	color: #d2691e;
+	position: absolute;
+    left: 0;
+	}
+	
+.back-link {
+	display: inline-block;
+    padding: 10px 25px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+	}
+.back-link:hover {
+	background-color: #aaaa00;
+	}

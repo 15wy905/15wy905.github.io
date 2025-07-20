@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录验证系统</title>
+	<link href="css/css.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <script>
+    function check() {
+        var name = document.getElementById("username").value;
+        var pass = document.getElementById("password").value;
+        
+        // 从localStorage获取注册信息
+        var registeredUser = localStorage.getItem("registeredUsername");
+        var registeredPass = localStorage.getItem("registeredPassword");
+        
+        if ((name == null || name == "") || (pass == null || pass == "")) {
+            alert("请填写用户名和密码");
+            return false;
+        }
+        
+        // 检查普通用户或admin登录
+        if((name == registeredUser && pass == registeredPass) || (name == "admin" && pass == "admin")) {
+            alert("登录成功！");
+            window.location.href = "successdl.html";
+            return true;
+        } else {
+            alert("用户名或密码错误");
+            return false;
+        }
+    }
+    
+    function resetForm() {
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+    }
+    </script>
+    
+    <div class="denglu_main">
+        <h3>登录</h3>
+        <form>
+            <div class="denglu_bd">
+                <label for="username">账号：</label>
+                <input type="text" id="username" name="username" />
+            </div>
+            <div class="denglu_bd">
+                <label for="password">密码：</label>
+                <input type="password" id="password" name="password" />
+            </div>
+            <div class="pad10">
+                <input type="button" value="登录" class="pad10" onClick="check()" />
+                <input type="button" value="重置" class="pad10" onClick="resetForm()" />
+            </div>
+        </form>
+        <div class="register-link">
+            没有账号？<a href="zhuce.html">立即注册</a>
+        </div>
+        <a href="index.html" class="back-link">返回Index</a>
+    </div>
+</body>

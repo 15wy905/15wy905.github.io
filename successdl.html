@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录成功</title>
+	<link href="css/successdl.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">✓</div>
+        <h1>登录成功</h1>
+        <p>欢迎<span id="welcome-user" class="username"></span>！您已成功登录系统，现在可以开始使用我们的服务。</p>
+        <a href="index.html" class="back-link">返回Index</a>
+        
+    </div>
+
+    <script>
+        const username = localStorage.getItem('registeredUsername') || 'admin';
+        const isAdmin = username === 'admin';
+        document.getElementById('welcome-user').textContent = isAdmin ? ' 管理员' : ' ' + username;
+        document.getElementById('display-username').textContent = username;
+    </script>
+</body>
+</html>

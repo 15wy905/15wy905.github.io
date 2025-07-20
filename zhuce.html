@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>注册验证系统</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var confirm_password = document.getElementById("confirm_password").value;
+        
+        if(username == "" || password == "" || confirm_password == "") {
+            alert("请填写所有必填字段");
+            return false;
+        }
+        
+        if(password != confirm_password) {
+            alert("两次输入的密码不一致");
+            return false;
+        }
+        
+        // 存储用户信息到localStorage
+        localStorage.setItem("registeredUsername", username);
+        localStorage.setItem("registeredPassword", password);
+        
+        alert("注册成功！请登录");
+        window.location.href = "denglu.html";
+        return false; // 阻止表单默认提交
+    }
+    </script>
+    
+    <div class="denglu_main">
+        <h3>注册</h3>
+        <form onsubmit="return validateForm()">
+            <div class="denglu_bd">
+                <label for="username">账号：</label>
+                <input id="username" name="username" type="text" required/>
+            </div>
+            <div class="denglu_bd">
+                <label for="password">密码：</label>
+                <input id="password" name="password" type="password" required/>
+            </div>
+            <div class="denglu_bd">
+                <label for="confirm_password">确认密码：</label>
+                <input id="confirm_password" name="confirm_password" type="password" required/>
+            </div>
+            <div class="denglu_bd">
+                <label for="remarks">备注：</label>
+                <textarea id="remarks" name="remarks" cols="35" rows="6"></textarea>
+            </div>
+            <div class="pad10">
+                <input type="submit" value="注册" class="pad10" />
+                <input type="reset" value="重置" class="pad10" />
+            </div>
+        </form>
+        <div class="login-link">
+            已有账号？<a href="denglu.html">立即登录</a>
+        </div>
+        <a href="index.html" class="back-link">返回Index</a>
+    </div>
+</body>
+</html>
